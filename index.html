@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Count</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="margin"></div>
+    <h1>You Have Viewed This Website
+</h1>
+<h1 id="viewCount"></h1>
+<h1>Times</h1>
+
+<p>Spread The Word</p>
+</body>
+</html>
+
+    <script>
+let viewCount;
+
+// Check if view count is stored in localStorage
+if (localStorage.getItem("viewCount")) {
+    // Retrieve view count from localStorage
+    viewCount = parseInt(localStorage.getItem("viewCount"));
+} else {
+    // Initialize view count to 0
+    viewCount = 0;
+}
+
+// Increase view count by 1
+viewCount++;
+
+// Update view count on the HTML page
+document.getElementById("viewCount").textContent = viewCount;
+
+// Save view count to localStorage
+localStorage.setItem("viewCount", viewCount);
+
+
+    </script>
+</body>
+</html>
